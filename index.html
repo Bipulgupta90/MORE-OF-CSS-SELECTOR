@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORE OF CSS SELECTOR</title>
+
+    <style>
+        .box:first-child{
+            background-color: red;
+        } 
+
+        .box::first-line {
+            background-color: bisque;
+        }
+
+        .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+
+        p,
+        a,
+        .box,
+        [data-color="primary"] {
+            padding-top: 45px;
+        }
+
+        
+        .box:nth-child(odd) {
+            background-color: rgb(232, 142, 7);
+        }
+
+        .box:nth-child(even) {
+            background-color: rgb(201, 222, 18);
+        }
+
+        .box:nth-last-child(2) {
+            background-color: cadetblue;
+
+        }
+
+        .boxes ::before {
+            content: "Bipul is good";
+            color: rgb(245, 5, 69);
+        }
+
+        .boxes::after {
+            content: "web development is also good";
+            color: aqua;
+        }
+
+        ::selection {
+            background-color: black;
+            color: coral;
+        }
+
+        .box::first-letter {
+            color: rgb(72, 0, 255);
+            font-size: 45px;
+        }
+
+        input::placeholder {
+            color: rgb(5, 5, 243);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box"> i m first box</div>
+        <div class="box">Hey i m a box</div>
+        <div class="box">Hey i m a box</div>
+        <input type="text" placeholder="https://github.com/Bipulgupta90">
+    </div>
+</body>
+
+</html>
